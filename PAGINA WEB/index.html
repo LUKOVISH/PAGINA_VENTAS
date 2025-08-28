@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+  <!-- Meta tags -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Page title -->
+  <title>Tienda LUKOVISH</title>
+
+  <!-- Links to external style sheets -->
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+
+  <!-- Links to pre-connect to Google Fonts servers and upload the font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Comfortaa:wght@300..700&display=swap"
+    rel="stylesheet">
+
+  <!-- Shortcut icon -->
+  <link rel="shortcut icon" href="../img/Example.jpg">
+
+  <!-- Meta tag for page description -->
+  <meta name="description" content="Website description.">
+</head>
+
+<body>
+  <!-- Encabezado -->
+  <header class="header">
+    <div class="logo">
+      <a href="#">
+        <img class="logo-img" src="img/LORA LOGO copia.png" alt="logo">
+      </a>
+    </div>
+
+    <nav class="nav">
+      <ul>
+        <li><a href="#novedades">Novedades</a></li>
+        <li><a href="#hombre">Hombre</a></li>
+        <li><a href="#mujer">Mujer</a></li>
+        <li><a href="#accesorios">Accesorios</a></li>
+      </ul>
+    </nav>
+
+    <div class="icons">
+      <a href="#" title="Perfil"><i class="fa-regular fa-user"></i></a>
+      <a href="#" title="Buscar"><i class="fa-solid fa-magnifying-glass"></i></a>
+      <a href="#" class="cart" title="Carrito">
+        <i class="fa-solid fa-bag-shopping"></i>
+      </a>
+    </div>
+  </header>
+
+  <!-- Banner principal -->
+  <section id="banner">
+    <h2>Estilo que te define</h2>
+    <p>Encuentra la moda más actual al mejor precio</p>
+    <a href="#novedades" class="btn">Ver Colección</a>
+  </section>
+
+  <!-- Sección de novedades -->
+  <section id="novedades">
+    <h2>Novedades</h2>
+    <div class="grid-productos">
+      <article class="producto">
+        <img src="img/camisa.jpg" alt="Camisa moderna">
+        <h3>Camisa Moderna</h3>
+        <p>$35.00</p>
+        <button>Añadir al carrito</button>
+      </article>
+      <article class="producto">
+        <img src="img/jeans.jpg" alt="Jeans ajustados">
+        <h3>Jeans Ajustados</h3>
+        <p>$50.00</p>
+        <button>Añadir al carrito</button>
+      </article>
+      <article class="producto">
+        <img src="img/vestido.jpg" alt="Vestido elegante">
+        <h3>Vestido Elegante</h3>
+        <p>$70.00</p>
+        <button>Añadir al carrito</button>
+      </article>
+    </div>
+  </section>
+
+  <!-- Sección Hombre -->
+  <section id="hombre">
+    <h2>Ropa para Hombre</h2>
+    <div class="grid-productos">
+      <article class="producto">
+        <img src="img/polera.jpg" alt="Polera básica">
+        <h3>Polera Básica</h3>
+        <p>$20.00</p>
+        <button>Añadir al carrito</button>
+      </article>
+    </div>
+  </section>
+
+  <!-- Sección Mujer -->
+  <section id="mujer">
+    <h2>Ropa para Mujer</h2>
+    <div class="grid-productos">
+      <article class="producto">
+        <img src="img/blusa.jpg" alt="Blusa de verano">
+        <h3>Blusa de Verano</h3>
+        <p>$25.00</p>
+        <button>Añadir al carrito</button>
+      </article>
+    </div>
+  </section>
+
+  <!-- Sección Accesorios -->
+  <section id="accesorios">
+    <h2>Accesorios</h2>
+    <div class="grid-productos">
+      <article class="producto">
+        <img src="img/gorra.jpg" alt="Gorra deportiva">
+        <h3>Gorra Deportiva</h3>
+        <p>$15.00</p>
+        <button>Añadir al carrito</button>
+      </article>
+    </div>
+  </section>
+
+  <!-- Contacto -->
+  <section id="contacto">
+    <h2>Contáctanos</h2>
+    <form>
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre" required>
+
+      <label for="correo">Correo:</label>
+      <input type="email" id="correo" name="correo" required>
+
+      <label for="mensaje">Mensaje:</label>
+      <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+
+  <!-- Pie de página -->
+  <footer>
+    <p>&copy; 2025 FashionStore. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="../JS/script.js"></script>
+</body>
+
+</html>
