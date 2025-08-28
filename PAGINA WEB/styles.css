@@ -1,10 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Comfortaa:wght@300..700&display=swap');
-
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: "Comic Neue", sans-serif;
+    font-family: "Roboto", sans-serif;
 }
 
 .header {
@@ -16,16 +14,10 @@
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.logo a {
-  text-decoration: none;
-  color: #fff;
-  font-weight: bold;
-  font-size: 24px;
-  letter-spacing: 1px;
-}
-
-.logo img{
-  height: 35px;
+.logo img {
+  width: 90px;
+  height: auto;
+  display: block;
 }
 
 .nav ul {
@@ -51,6 +43,7 @@
   font-weight: bold;
 }
 
+/* ICONOS */
 .icons {
   display: flex;
   gap: 18px;
@@ -69,6 +62,7 @@
   color: #c34a4a;
 }
 
+/* CARRITO CON CONTADOR */
 .cart {
   position: relative;
 }
