@@ -10,12 +10,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 0px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 20px 25px;
 }
 
 .logo img {
-  width: 150px;
+  width: 140px;
   height: auto;
   display: block;
 }
@@ -29,8 +28,8 @@
 .nav a {
   text-decoration: none;
   color: #fff;
-  font-weight: 600;
-  font-size: 19px;
+  font-weight: 500;
+  font-size: 20px;
   transition: color 0.3s ease;
 }
 
@@ -43,7 +42,6 @@
   font-weight: bold;
 }
 
-/* ICONOS */
 .icons {
   display: flex;
   gap: 18px;
@@ -52,7 +50,7 @@
 
 .icons a {
   color: #fff;
-  font-size: 19px;
+  font-size: 20px;
   text-decoration: none;
   position: relative;
   transition: color 0.3s ease;
