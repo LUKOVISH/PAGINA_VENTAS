@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  console.log("Página de inicio cargada ✅");
+  console.log("Página de inicio cargada.");
 
   const banners = document.querySelectorAll(".banner-img");
   let currentIndex = 0;

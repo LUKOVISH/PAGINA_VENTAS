@@ -1,29 +1,4 @@
 // ============================
-// CARGAR PARTES DEL HTML (HEADER & FOOTER)
-// ============================
-async function includeHTML(containerId, filePath) {
-  const container = document.getElementById(containerId);
-  if (container) {
-    try {
-      const response = await fetch(filePath);
-      if (response.ok) {
-        container.innerHTML = await response.text();
-
-        // Si es el header, inicializamos su JS después de cargarlo
-        if (filePath.includes("header")) {
-          initDrawer();
-          highlightActivePage();
-        }
-      } else {
-        console.error(`Error al cargar ${filePath}`);
-      }
-    } catch (error) {
-      console.error(`Error: ${error}`);
-    }
-  }
-}
-
-// ============================
 // INICIALIZAR DRAWER (MENÚ MÓVIL)
 // ============================
 function initDrawer() {
@@ -78,25 +53,9 @@ function highlightActivePage() {
 }
 
 // ============================
-// CARGA DE COMPONENTES AL INICIAR
+// INICIALIZACIÓN
 // ============================
 document.addEventListener("DOMContentLoaded", () => {
-  includeHTML("header-container", "header.html");
-  includeHTML("footer-container", "footer.html");
-});
-// Función para cargar partials
-async function loadPartial(url, containerId) {
-    try {
-        const response = await fetch(url);
-        const html = await response.text();
-        document.getElementById(containerId).innerHTML = html;
-    } catch (error) {
-        console.error(`Error cargando ${url}:`, error);
-    }
-}
-
-// Cargar header y footer cuando el DOM esté listo
-document.addEventListener('DOMContentLoaded', function() {
-    loadPartial('header.html', 'header-container');
-    loadPartial('footer.html', 'footer-container');
+  initDrawer();
+  highlightActivePage();
 });
