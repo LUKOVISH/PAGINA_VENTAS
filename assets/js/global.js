@@ -84,3 +84,19 @@ document.addEventListener("DOMContentLoaded", () => {
   includeHTML("header-container", "/partials/header.html");
   includeHTML("footer-container", "/partials/footer.html");
 });
+// Función para cargar partials
+async function loadPartial(url, containerId) {
+    try {
+        const response = await fetch(url);
+        const html = await response.text();
+        document.getElementById(containerId).innerHTML = html;
+    } catch (error) {
+        console.error(`Error cargando ${url}:`, error);
+    }
+}
+
+// Cargar header y footer cuando el DOM esté listo
+document.addEventListener('DOMContentLoaded', function() {
+    loadPartial('partials/header.html', 'header-container');
+    loadPartial('partials/footer.html', 'footer-container');
+});
