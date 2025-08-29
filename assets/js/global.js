@@ -81,8 +81,8 @@ function highlightActivePage() {
 // CARGA DE COMPONENTES AL INICIAR
 // ============================
 document.addEventListener("DOMContentLoaded", () => {
-  includeHTML("header-container", "/partials/header.html");
-  includeHTML("footer-container", "/partials/footer.html");
+  includeHTML("header-container", "header.html");
+  includeHTML("footer-container", "footer.html");
 });
 // Función para cargar partials
 async function loadPartial(url, containerId) {
@@ -97,6 +97,6 @@ async function loadPartial(url, containerId) {
 
 // Cargar header y footer cuando el DOM esté listo
 document.addEventListener('DOMContentLoaded', function() {
-    loadPartial('partials/header.html', 'header-container');
-    loadPartial('partials/footer.html', 'footer-container');
+    loadPartial('header.html', 'header-container');
+    loadPartial('footer.html', 'footer-container');
 });
