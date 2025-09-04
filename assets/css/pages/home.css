@@ -68,3 +68,12 @@
   .logo img { height: 42px; }
   .banner-btn a { padding: 12px 28px; font-size: 1rem; }
 }
+.container-traje {
+  display: flex;
+  align-items: center;
+  padding: 10px 10px;
+
+}
+.container-traje .traje image {
+  width: 100px;
+}
