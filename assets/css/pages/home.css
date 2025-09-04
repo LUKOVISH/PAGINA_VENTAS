@@ -68,12 +68,26 @@
   .logo img { height: 42px; }
   .banner-btn a { padding: 12px 28px; font-size: 1rem; }
 }
-.container-traje {
-  display: flex;
-  align-items: center;
-  padding: 10px 10px;
 
+.container-trajes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+  gap: 30px; /* más espacio entre tarjetas */
+  max-width: 1400px; /* el contenedor total ocupa más ancho */
+  margin: 0 auto;
+  padding: 30px;
 }
-.container-traje .traje image {
-  width: 100px;
+
+.traje {
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  overflow: hidden;
+  height: 650px; /* <<--- más alto para que cubra más espacio */
+}
+
+.traje img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* llena todo el contenedor */
+  display: block;
 }
