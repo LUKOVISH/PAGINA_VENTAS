@@ -72,7 +72,7 @@
 .container-trajes {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  height: 90vh; /* un poco menos que toda la pantalla */
+  height: 225vh; /* un poco menos que toda la pantalla */
   gap: 20px; /* espacio entre columnas */
   padding: 20px; /* espacio blanco alrededor */
   background: white; /* fondo blanco */
