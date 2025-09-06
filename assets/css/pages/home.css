@@ -124,3 +124,121 @@
 .overlay button:hover {
   background: #444;
 }
+
+.marquee {
+  background: #000;
+  color: #fff;
+  overflow: hidden;
+  white-space: nowrap;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  padding: 10px 0;
+  position: relative;
+  z-index: 5;
+}
+
+.marquee-content {
+  display: inline-flex;
+  gap: 50px;
+  animation: scroll 40s linear infinite;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.marquee-content span {
+  flex-shrink: 0;
+}
+
+@keyframes scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+/* =========================
+   Nueva Colección
+========================= */
+.new-collection {
+  padding: 40px 20px;
+  background: #fff;
+}
+
+.collection-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.collection-header h2 {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.collection-header a {
+  color: #000;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+  margin-bottom: 40px;
+}
+
+.product-card {
+  text-align: left;
+}
+
+.product-image {
+  width: 100%;
+  aspect-ratio: 3/4; /* mantiene la proporción vertical */
+  overflow: hidden;
+  border-radius: 8px;
+  background: #f6f6f6;
+}
+
+.product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 1;
+  transition: opacity 0.4s ease-in-out; /* transición suave */
+}
+
+.product-image img.fade-out {
+  opacity: 0; /* se desvanece */
+}
+
+.product-thumbs {
+  display: flex;
+  justify-content: left;
+  gap: 8px;
+  margin: 10px 0;
+}
+
+.product-thumbs img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 1.5px solid transparent;
+  transition: border .2s ease;
+  object-fit: cover;
+}
+
+.product-thumbs img:hover {
+  border-color: #000;
+}
+
+.product-card h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-top: 5px;
+}
+
+.product-card p {
+  font-size: .95rem;
+  font-weight: 500;
+  color: #333;
+}
