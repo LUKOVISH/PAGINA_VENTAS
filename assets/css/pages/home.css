@@ -32,7 +32,7 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,.35);
+  background: rgba(0, 0, 0, .35);
   z-index: 1;
 }
 
@@ -54,7 +54,7 @@
   font-weight: 700;
   border-radius: 8px;
   transition: transform .2s, background .2s, box-shadow .2s;
-  box-shadow: 0 6px 16px rgba(0,0,0,.35);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, .35);
 }
 
 .banner-btn a:hover {
@@ -62,27 +62,22 @@
   transform: translateY(-1px) scale(1.03);
 }
 
-/* Responsive específico para home */
-@media (max-width: 900px) {
-  .banner { height: 70vh; }
-  .logo img { height: 42px; }
-  .banner-btn a { padding: 12px 28px; font-size: 1rem; }
-}
-
+/* =========================
+   Trajes
+========================= */
 .container-trajes {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  height: 225vh; /* un poco menos que toda la pantalla */
-  gap: 20px; /* espacio entre columnas */
-  padding: 20px; /* espacio blanco alrededor */
-  background: white; /* fondo blanco */
+  gap: 20px;
+  padding: 20px;
+  background: white;
 }
 
 .traje {
   position: relative;
   overflow: hidden;
-  border-radius: 10px; /* esquinas suaves como en la img */
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .traje img {
@@ -102,7 +97,7 @@
   bottom: 20px;
   left: 20px;
   color: white;
-  text-shadow: 2px 2px 6px rgba(0,0,0,0.8);
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
 }
 
 .overlay h2 {
@@ -125,12 +120,15 @@
   background: #444;
 }
 
+/* =========================
+   Marquee
+========================= */
 .marquee {
   background: #000;
   color: #fff;
   overflow: hidden;
   white-space: nowrap;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
   padding: 10px 0;
   position: relative;
   z-index: 5;
@@ -149,15 +147,19 @@
 }
 
 @keyframes scroll {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
 }
 
 /* =========================
    Nueva Colección
 ========================= */
 .new-collection {
-  padding: 40px 20px;
+  padding: 40px 20px 0 20px;
   background: #fff;
 }
 
@@ -179,6 +181,13 @@
   font-weight: 600;
 }
 
+/* 🔹 Ajuste automático si solo queda el h2 */
+.collection-header h2:only-child {
+  margin: 0 auto; /* centra horizontalmente */
+  text-align: center;
+}
+
+/* Grid de productos */
 .products-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -192,7 +201,7 @@
 
 .product-image {
   width: 100%;
-  aspect-ratio: 3/4; /* mantiene la proporción vertical */
+  aspect-ratio: 3/4;
   overflow: hidden;
   border-radius: 8px;
   background: #f6f6f6;
@@ -203,11 +212,11 @@
   height: 100%;
   object-fit: cover;
   opacity: 1;
-  transition: opacity 0.4s ease-in-out; /* transición suave */
+  transition: opacity 0.4s ease-in-out;
 }
 
 .product-image img.fade-out {
-  opacity: 0; /* se desvanece */
+  opacity: 0;
 }
 
 .product-thumbs {
@@ -241,4 +250,179 @@
   font-size: .95rem;
   font-weight: 500;
   color: #333;
+}
+
+/* =========================
+   Hero Section
+========================= */
+.hero-section {
+  position: relative;
+  width: 100%;
+}
+
+.hero-image {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  overflow: hidden;
+}
+
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-btn {
+  position: absolute;
+  bottom: 70px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+.hero-btn a {
+  background: #000;
+  color: #fff;
+  text-decoration: none;
+  padding: 14px 36px;
+  font-size: 18px;
+  font-weight: 500;
+  border-radius: 6px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);
+  transition: background 0.3s ease;
+}
+
+.hero-btn a:hover {
+  background: #222;
+}
+
+/* =========================
+   Info Icons
+========================= */
+.info-icons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 100px;
+  background: #fff;
+  gap: 20px;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+  color: #000;
+  max-width: 300px;
+  text-align: left;
+  padding: 20px;
+}
+
+.info-item i {
+  font-size: 16px;
+  color: #000;
+}
+
+.info-item span {
+  font-size: 16px;
+  color: #000;
+  line-height: 1.4;
+}
+
+.info-item span strong {
+  font-weight: bold;
+}
+
+/* =========================
+   Responsive
+========================= */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .container-trajes {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .info-icons {
+    padding: 30px 40px;
+  }
+
+  .collection-header h2 {
+    font-size: 28px;
+  }
+}
+
+/* Móvil */
+@media (max-width: 768px) {
+  .banner {
+    height: 60vh;
+  }
+
+  .banner-btn a {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+
+  .container-trajes {
+    grid-template-columns: 1fr;
+  }
+
+  .products-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .info-icons {
+    flex-direction: column;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .info-item {
+    max-width: none;
+    padding: 10px;
+  }
+
+  .collection-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .collection-header h2 {
+    font-size: 24px;
+  }
+
+  /* Ajuste si solo hay el título */
+  .collection-header h2:only-child {
+    text-align: center;
+    align-self: center;
+    width: 100%;
+  }
+}
+
+/* Muy pequeños (móviles chicos) */
+@media (max-width: 480px) {
+  .banner {
+    height: 50vh;
+  }
+
+  .banner-btn a {
+    font-size: 0.8rem;
+    padding: 8px 16px;
+  }
+
+  .overlay h2 {
+    font-size: 1.2rem;
+  }
+
+  .overlay button {
+    padding: 6px 12px;
+    font-size: 0.8rem;
+  }
 }
