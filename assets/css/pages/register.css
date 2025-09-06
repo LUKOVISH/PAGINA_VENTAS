@@ -7,7 +7,7 @@
   padding: 20px;
   position: relative;
 
-  background: url("/assets/img/banner1-lora.png") no-repeat center center/cover;
+  background: url("/assets/img/banner2-lora.jpg") no-repeat center center/cover;
 }
 
 .register-container::before {
@@ -95,11 +95,70 @@
 }
 
 /* RESPONSIVE */
+/* RESPONSIVE */
+
+/* Tablets y pantallas medianas */
+@media (max-width: 768px) {
+  .register-container {
+    padding: 15px;
+  }
+
+  .register-box {
+    max-width: 380px;
+    padding: 30px 20px;
+  }
+
+  .register-box h1 {
+    font-size: 24px;
+  }
+
+  .register-box p {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+
+  .input-group input {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .btn-register {
+    font-size: 15px;
+    padding: 10px;
+  }
+}
+
+/* Celulares pequeños */
 @media (max-width: 480px) {
   .register-box {
-    padding: 25px 20px;
+    max-width: 100%;
+    padding: 20px 15px;
+    border-radius: 8px;
   }
+
   .register-box h1 {
-    font-size: 22px;
+    font-size: 20px;
+  }
+
+  .register-box p {
+    font-size: 13px;
+  }
+
+  .input-group label {
+    font-size: 13px;
+  }
+
+  .input-group input {
+    padding: 9px;
+    font-size: 13px;
+  }
+
+  .btn-register {
+    font-size: 14px;
+    padding: 9px;
+  }
+
+  .register-links {
+    font-size: 13px;
   }
 }

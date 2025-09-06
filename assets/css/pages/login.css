@@ -97,11 +97,70 @@
 }
 
 /* RESPONSIVE */
+/* RESPONSIVE */
+
+/* Tablets y pantallas medianas */
+@media (max-width: 768px) {
+  .login-container {
+    padding: 15px;
+  }
+
+  .login-box {
+    max-width: 350px;
+    padding: 30px 20px;
+  }
+
+  .login-box h1 {
+    font-size: 24px;
+  }
+
+  .login-box p {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+
+  .input-group input {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .btn-login {
+    font-size: 15px;
+    padding: 10px;
+  }
+}
+
+/* Celulares pequeños */
 @media (max-width: 480px) {
   .login-box {
-    padding: 25px 20px;
+    max-width: 100%;
+    padding: 20px 15px;
+    border-radius: 8px;
   }
+
   .login-box h1 {
-    font-size: 22px;
+    font-size: 20px;
+  }
+
+  .login-box p {
+    font-size: 13px;
+  }
+
+  .input-group label {
+    font-size: 13px;
+  }
+
+  .input-group input {
+    padding: 9px;
+    font-size: 13px;
+  }
+
+  .btn-login {
+    font-size: 14px;
+    padding: 9px;
+  }
+
+  .login-links {
+    font-size: 13px;
   }
 }
