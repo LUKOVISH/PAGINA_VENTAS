@@ -1,138 +1,81 @@
-/* ====== HERO MASIVO ====== */
+/* ===== HERO MASIVO ===== */
 .hero-nosotros-masivo {
   position: relative;
-  height: 85vh;
-  background: url("/assets/img/traje-banne-nosotros.jpg") no-repeat center center/cover;
+  height: 100vh; /* ocupa toda la pantalla */
+  background: url("/assets/img/traje02-banne-nosotros.jpg") no-repeat center center;
+  background-size: cover; /* ajusta la imagen */
+  background-attachment: fixed; /* efecto parallax */
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  color: #fff;
-  overflow: hidden;
 }
 
-
-.hero-nosotros-masivo .overlay {
+.hero-nosotros-masivo::before {
+  content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.5); 
-  z-index: 1; /* <= asegúrate que esté debajo del texto */
+  background: rgba(0, 0, 0, 0.55); /* oscurece la imagen */
+  z-index: 1;
 }
 
 .hero-nosotros-masivo .hero-content {
   position: relative;
-  z-index: 2; /* el texto siempre por encima */
-  color: #fff; /* o cámbialo a negro si tu fondo es claro */
-}s
+  z-index: 2;
+  color: #fff;
+  padding: 20px;
+  animation: fadeInUp 1.5s ease;
+}
 
 .hero-nosotros-masivo h1 {
-  font-size: 4rem;
-  margin-bottom: 15px;
-  font-weight: 700;
+  font-size: 3.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
   letter-spacing: 2px;
 }
 
-.hero-nosotros-masivo p {
-  font-size: 1.5rem;
-  font-weight: 300;
-  line-height: 1.6;
-}
-
-/* ====== SECCIÓN NOSOTROS DETALLADA ====== */
-.nosotros {
-  padding: 100px 8%;
+/* ===== SOBRE NOSOTROS ===== */
+.sobre-nosotros {
+  padding: 80px 20px;
   background: #f9f9f9;
-  font-family: 'Segoe UI', sans-serif;
-}
-
-.nosotros-container {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 60px;
-}
-
-.nosotros-texto {
-  flex: 1 1 50%;
-}
-
-.nosotros-texto .titulo-seccion {
-  font-size: 2.8rem;
-  margin-bottom: 25px;
-  color: #222;
-  position: relative;
-}
-
-.nosotros-texto .titulo-seccion::after {
-  content: "";
-  width: 70px;
-  height: 4px;
-  background: #222;
-  display: block;
-  margin-top: 8px;
-  border-radius: 2px;
-}
-
-.nosotros-texto p {
-  font-size: 1.15rem;
-  line-height: 1.8;
-  margin-bottom: 18px;
-  color: #444;
-}
-
-.nosotros-texto .vision {
-  margin-top: 20px;
-  padding-left: 20px;
-  border-left: 4px solid #222;
-  font-style: italic;
-  font-size: 1.1rem;
-  color: #555;
-}
-
-.nosotros-img {
-  flex: 1 1 40%;
+  color: #333;
   text-align: center;
 }
 
-.nosotros-img img {
-  max-width: 100%;
-  border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
+.sobre-nosotros .container {
+  max-width: 900px;
+  margin: auto;
 }
 
-.nosotros-img img:hover {
-  transform: scale(1.07);
-  box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+.sobre-nosotros h2 {
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+  color: #111;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
-/* ====== ANIMACIONES ====== */
-.animar {
-  opacity: 0;
-  transform: translateY(50px);
-  transition: all 0.8s ease-out;
+.sobre-nosotros p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin-bottom: 20px;
 }
 
-.animar.visible {
-  opacity: 1;
-  transform: translateY(0);
+.sobre-nosotros blockquote {
+  font-size: 1.3rem;
+  font-style: italic;
+  color: #555;
+  border-left: 5px solid #222;
+  padding-left: 15px;
+  margin-top: 30px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
 }
 
-/* ====== RESPONSIVE ====== */
-@media (max-width: 768px) {
-  .hero-nosotros-masivo h1 {
-    font-size: 2.5rem;
-  }
-
-  .hero-nosotros-masivo p {
-    font-size: 1.2rem;
-  }
-
-  .nosotros-container {
-    flex-direction: column;
-  }
-
-  .nosotros-texto, .nosotros-img {
-    flex: 1 1 100%;
-  }
+/* Animación */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
 }
