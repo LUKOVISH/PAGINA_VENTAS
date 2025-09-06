@@ -1,0 +1,127 @@
+/* Banner */
+.offers-banner {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+}
+.offers-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.offers-banner .banner-text {
+  position: absolute;
+  bottom: 30px;
+  left: 40px;
+  color: #fff;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+  font-size: 25px;
+}
+
+/* Filtros */
+.offers-filters {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.offers-filters .filters select {
+  padding: 8px 12px;
+  margin-left: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+/* Grid */
+.offers-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columnas fijas */
+  gap: 25px;
+  padding: 30px;
+}
+.offer-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  overflow: hidden;
+  text-align: center;
+}
+.offer-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+.card-info {
+  padding: 15px;
+}
+.price {
+  margin: 10px 0;
+}
+.old-price {
+  text-decoration: line-through;
+  color: #888;
+  margin-right: 10px;
+}
+.new-price {
+  color: #d32f2f;
+  font-weight: bold;
+}
+.btn-add {
+  padding: 10px 15px;
+  border: none;
+  background: #000;
+  color: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.btn-add:hover {
+  background: #444;
+}
+
+/* Responsivo */
+
+/* Tablets (pantallas medianas) */
+@media (max-width: 992px) {
+  .offers-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+  }
+  .offers-filters {
+    flex-direction: column; /* filtros uno encima del otro */
+    align-items: flex-start;
+    gap: 15px;
+  }
+  .offers-banner {
+    height: 220px; /* un poco más pequeño en tablet */
+  }
+  .offers-banner .banner-text {
+    font-size: 20px;
+    bottom: 20px;
+    left: 20px;
+  }
+}
+
+/* Móviles (pantallas pequeñas) */
+@media (max-width: 600px) {
+  .offers-grid {
+    grid-template-columns: 1fr; /* 1 columna */
+  }
+  .offers-banner {
+    height: 180px; /* más compacto */
+  }
+  .offers-banner .banner-text {
+    font-size: 16px;
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 15px;
+  }
+  .offers-filters h2 {
+    font-size: 18px;
+  }
+  .offers-filters .filters select {
+    width: 100%; /* selects a todo el ancho */
+    margin-left: 0;
+  }
+}
