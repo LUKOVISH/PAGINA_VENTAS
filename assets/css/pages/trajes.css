@@ -1,0 +1,199 @@
+/* HERO */
+.trajes-hero {
+  position: relative;
+  width: 100%;
+  height: 50vh;
+  overflow: hidden;
+}
+
+.trajes-hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.trajes-hero .hero-text {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: #fff;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+}
+
+.trajes-hero h1 {
+  font-size: 50px;
+  margin-bottom: 10px;
+}
+
+.trajes-hero p {
+  font-size: 22px;
+}
+
+/* FILTROS */
+.trajes-filtros {
+  background: #f6f6f6;
+  padding: 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+.filtros-container {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.filtros-container select,
+.filtros-container .buscador {
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+/* GRID DE TRAJES */
+.trajes-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  padding: 30px;
+}
+
+.product-card {
+  text-align: center;
+}
+
+.product-image {
+  width: 100%;
+  aspect-ratio: 3/4;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 10px;
+  background: #f9f9f9;
+}
+
+.product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .3s ease;
+}
+
+.product-image:hover img {
+  transform: scale(1.05);
+}
+
+.product-card h3 {
+  font-size: 20px;
+  margin: 5px 0;
+}
+
+.product-card p {
+  font-weight: bold;
+  color: #222;
+  font-size: 18px;
+}
+
+/* PAGINACIÓN */
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  padding: 20px;
+}
+
+.pagination a {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  color: #333;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.pagination a.active {
+  background: #000;
+  color: #fff;
+  border-color: #000;
+}
+
+/* ============================= */
+/* RESPONSIVE TRAJES */
+/* ============================= */
+
+/* Tablets (pantallas medianas) */
+@media (max-width: 992px) {
+  /* Hero */
+  .trajes-hero {
+    height: 40vh;
+  }
+  .trajes-hero h1 {
+    font-size: 36px;
+  }
+  .trajes-hero p {
+    font-size: 18px;
+  }
+
+  /* Grid */
+  .trajes-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 20px;
+  }
+
+  /* Filtros */
+  .filtros-container {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  .filtros-container select,
+  .filtros-container .buscador {
+    width: 100%;
+  }
+}
+
+/* Móviles (pantallas pequeñas) */
+@media (max-width: 600px) {
+  /* Hero */
+  .trajes-hero {
+    height: 30vh;
+  }
+  .trajes-hero h1 {
+    font-size: 26px;
+  }
+  .trajes-hero p {
+    font-size: 14px;
+  }
+
+  /* Grid */
+  .trajes-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    padding: 15px;
+  }
+
+  /* Filtros */
+  .filtros-container {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+  }
+  .filtros-container select,
+  .filtros-container .buscador {
+    width: 100%;
+    font-size: 14px;
+    padding: 8px 10px;
+  }
+
+  /* Paginación */
+  .pagination {
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+  .pagination a {
+    padding: 6px 10px;
+    font-size: 14px;
+  }
+}
